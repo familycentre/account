@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My Account - Family Centre</title>
+    <shuzhou config="familycentre" font="withbrowser" captcha="1"/>
+    <script>
+        function viewstatus(){
+            var urlhref = window.location.href;
+            var name;
+            var lginstts = 1;
+            if (urlhref = "https://familycentre.github.io/account/myaccount.html?isLogin=1"){
+                  name = "shuzhou.liu";
+            }
+            else{
+                if (urlhref = "https://familycentre.github.io/account/myaccount.html?isLogin=2"){
+                        name = "sunwenxia";
+                }
+                   else{
+                        if (urlhref = "https://familycentre.github.io/account/myaccount.html?isLogin=3"){
+                          name = "liujian";
+                   }
+                   else{
+                          alert ("You are not loged in.");
+                          lginstts = 0;
+                  }
+              }
+           }
+           if (lginstts == 1){
+              alert ("Account Details\nAccount Name: "+name+"@familycentre.edu\nAccount Sync: Avaliable\n\n\n\n(c)2020 Shuzhou Foundation. All rights reserved.");
+           }
+        }
+    </script>
+    <style>
+        .shuzhou {
+	          font-family: "Product Sans";
+        }
+    </style>
+  </head>
+  <body class = "shuzhou">
+    <h1>My Account</h1>
+    <p>
+      <a href="javascript:viewstatus()">
+        <button class = "shuzhou">View Account Status</button>
+      </a>
+    </p>
+    <footer>
+      <p>(c)2020 Shuzhou Foundation. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
